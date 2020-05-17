@@ -97,9 +97,10 @@
                         app:srcCompat="@drawable/pp" />
 
                     <ImageView
+
                         android:layout_marginLeft="300dp"
                         android:layout_marginTop="30dp"
-                        android:id="@+id/imageView15"
+                        android:id="@+id/blocks"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         app:srcCompat="@drawable/ar" />
@@ -145,7 +146,7 @@
                     <ImageView
                         android:layout_marginLeft="300dp"
                         android:layout_marginTop="30dp"
-                        android:id="@+id/imageView15"
+                        android:id="@+id/flow"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         app:srcCompat="@drawable/ar" />
@@ -189,7 +190,7 @@
                     <ImageView
                         android:layout_marginLeft="300dp"
                         android:layout_marginTop="30dp"
-                        android:id="@+id/imageView15"
+                        android:id="@+id/ds"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         app:srcCompat="@drawable/ar" />
@@ -234,7 +235,7 @@
                     <ImageView
                         android:layout_marginLeft="300dp"
                         android:layout_marginTop="30dp"
-                        android:id="@+id/imageView15"
+                        android:id="@+id/as"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         app:srcCompat="@drawable/ar" />
@@ -279,7 +280,7 @@
                     <ImageView
                         android:layout_marginLeft="300dp"
                         android:layout_marginTop="30dp"
-                        android:id="@+id/imageView15"
+                        android:id="@+id/collections"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         app:srcCompat="@drawable/ar" />
@@ -324,7 +325,7 @@
                     <ImageView
                         android:layout_marginLeft="300dp"
                         android:layout_marginTop="30dp"
-                        android:id="@+id/imageView15"
+                        android:id="@+id/filesio"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         app:srcCompat="@drawable/ar" />
@@ -369,7 +370,7 @@
                     <ImageView
                         android:layout_marginLeft="300dp"
                         android:layout_marginTop="30dp"
-                        android:id="@+id/imageView15"
+                        android:id="@+id/networking"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         app:srcCompat="@drawable/ar" />
@@ -414,7 +415,7 @@
                     <ImageView
                         android:layout_marginLeft="300dp"
                         android:layout_marginTop="30dp"
-                        android:id="@+id/imageView15"
+                        android:id="@+id/netser"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         app:srcCompat="@drawable/ar" />

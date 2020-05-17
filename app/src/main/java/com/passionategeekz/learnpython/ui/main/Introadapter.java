@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.passionategeekz.learnpython.R;
+import com.passionategeekz.learnpython.data.Installation;
 import com.passionategeekz.learnpython.introduction;
 
 /**
@@ -33,7 +34,7 @@ public class Introadapter extends FragmentPagerAdapter {
                 return in;
 
             case 1:
-                introduction inn = new introduction();
+                Installation inn = new Installation();
                 return inn;
         }
         return null;

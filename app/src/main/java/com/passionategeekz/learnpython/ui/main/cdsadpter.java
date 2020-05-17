@@ -9,6 +9,9 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.passionategeekz.learnpython.R;
 import com.passionategeekz.learnpython.introduction;
+import com.passionategeekz.learnpython.data.Stacks;
+import com.passionategeekz.learnpython.data.Dictionaries;
+import com.passionategeekz.learnpython.data.Interating_Data_Structures;
 
 public class cdsadpter extends FragmentPagerAdapter {
 
@@ -25,20 +28,23 @@ public class cdsadpter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                introduction in = new introduction();
+                Stacks in = new Stacks();
                 return in;
 
             case 1:
-                introduction inn = new introduction();
+                Dictionaries inn = new Dictionaries();
                 return inn;
-        }
-        return null;
+
+            case 2:
+                Interating_Data_Structures interating_data_structures = new Interating_Data_Structures();
+                return  interating_data_structures;
+        } return null;
     }
 
     @Override
     public int getCount() {
         // Show 2 total pages.
-        return 2;
+        return 3;
     }
     @Override
     public CharSequence getPageTitle (int i)
@@ -46,9 +52,12 @@ public class cdsadpter extends FragmentPagerAdapter {
         switch (i)
         {
             case 0:
-                return "Introduction";
+                return "Lists,Stacks,Queue";
             case 1:
-                return "Installation";
+                return "Dictionaries";
+            case 2:
+                return "Interating Data Structures";
+
 
         }
         return null;

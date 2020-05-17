@@ -9,6 +9,11 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.passionategeekz.learnpython.R;
 import com.passionategeekz.learnpython.introduction;
+import com.passionategeekz.learnpython.data.Getting_Time;
+import com.passionategeekz.learnpython.data.Getting_Websites;
+import com.passionategeekz.learnpython.data.Downloading_file;
+
+
 
 public class conncetionadpater extends FragmentPagerAdapter {
 
@@ -25,12 +30,16 @@ public class conncetionadpater extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                introduction in = new introduction();
+                Getting_Time in = new Getting_Time();
                 return in;
 
             case 1:
-                introduction inn = new introduction();
+                Getting_Websites inn = new Getting_Websites();
                 return inn;
+
+            case 2:
+                Downloading_file downloading_file= new Downloading_file();
+                return  downloading_file;
         }
         return null;
     }
@@ -38,7 +47,7 @@ public class conncetionadpater extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // Show 2 total pages.
-        return 2;
+        return 3;
     }
 
     @Override
@@ -47,9 +56,11 @@ public class conncetionadpater extends FragmentPagerAdapter {
         switch (i)
         {
             case 0:
-                return "Introduction";
+                return "Getting Time";
             case 1:
-                return "Installation";
+                return "Getting Websites";
+            case 2:
+                return "Downloading file" ;
 
         }
         return null;

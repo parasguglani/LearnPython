@@ -5,6 +5,7 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
+import com.passionategeekz.learnpython.ui.main.fileioadpter;
 
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,16 +22,10 @@ public class fileio extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fileio);
 
+        fileioadpter b = new fileioadpter(this, getSupportFragmentManager());
+        ViewPager viewPager = findViewById(R.id.view_pager);
+        viewPager.setAdapter(b);
         TabLayout tabs = findViewById(R.id.tabs);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        tabs.setupWithViewPager(viewPager);
     }
 }

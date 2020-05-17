@@ -9,6 +9,12 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.passionategeekz.learnpython.R;
 import com.passionategeekz.learnpython.introduction;
+import  com.passionategeekz.learnpython.data.Module;
+import com.passionategeekz.learnpython.data.Package;
+import com.passionategeekz.learnpython.data.Classes;
+import com.passionategeekz.learnpython.data.Attributes;
+import com.passionategeekz.learnpython.data.Methods;
+
 
 public class asadpter extends FragmentPagerAdapter {
 
@@ -24,13 +30,28 @@ public class asadpter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position) {
+
             case 0:
-                introduction in = new introduction();
-                return in;
+                Module m= new Module();
+                return m;
 
             case 1:
-                introduction inn = new introduction();
-                return inn;
+                Package p = new Package();
+                return p;
+
+            case 2:
+                Classes cl = new Classes();
+                return cl;
+
+            case 3:
+                Attributes at = new Attributes();
+                return at;
+
+            case 4:
+                Methods mt = new Methods();
+                return mt;
+
+
         }
         return null;
     }
@@ -38,7 +59,7 @@ public class asadpter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // Show 2 total pages.
-        return 2;
+        return 5;
     }
     @Override
     public CharSequence getPageTitle (int i)
@@ -46,9 +67,15 @@ public class asadpter extends FragmentPagerAdapter {
         switch (i)
         {
             case 0:
-                return "Introduction";
+                return "Module";
             case 1:
-                return "Installation";
+                return "Package";
+            case 2:
+                return "Classes";
+            case 3:
+                return "Attributes";
+            case 4:
+                return "Methods";
 
         }
         return null;

@@ -8,7 +8,15 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.passionategeekz.learnpython.R;
+import com.passionategeekz.learnpython.data.Interpreter;
 import com.passionategeekz.learnpython.introduction;
+import com.passionategeekz.learnpython.data.Number;
+import  com.passionategeekz.learnpython.data.Stdio;
+import  com.passionategeekz.learnpython.data.String;
+import  com.passionategeekz.learnpython.data.Lists;
+
+
+
 
 public class blockadpter extends FragmentPagerAdapter {
 
@@ -25,12 +33,24 @@ public class blockadpter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                introduction in = new introduction();
+                Interpreter in = new Interpreter();
                 return in;
 
             case 1:
-                introduction inn = new introduction();
+                Number inn = new Number();
                 return inn;
+
+            case 2:
+                String i = new String();
+                return i;
+
+            case 3:
+                Lists l= new Lists();
+                return l;
+
+            case 4:
+                Stdio st= new Stdio();
+                return st;
         }
         return null;
     }
@@ -38,7 +58,7 @@ public class blockadpter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // Show 2 total pages.
-        return 2;
+        return 5;
     }
 
     @Override
@@ -47,9 +67,15 @@ public class blockadpter extends FragmentPagerAdapter {
         switch (i)
         {
             case 0:
-                return "Introduction";
+                return "Interpreter";
             case 1:
-                return "Installation";
+                return "Number";
+            case 2:
+                return "String";
+            case 3:
+                return "Lists";
+            case 4:
+                return "Std I/O";
 
         }
         return null;

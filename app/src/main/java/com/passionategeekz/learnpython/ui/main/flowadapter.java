@@ -9,6 +9,10 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.passionategeekz.learnpython.R;
 import com.passionategeekz.learnpython.introduction;
+import  com.passionategeekz.learnpython.data.Conditional;
+import  com.passionategeekz.learnpython.data.Looping_for;
+import  com.passionategeekz.learnpython.data.Looping_while;
+import com.passionategeekz.learnpython.data.Range;
 
 public class flowadapter extends FragmentPagerAdapter {
 
@@ -25,12 +29,20 @@ public class flowadapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                introduction in = new introduction();
+                Conditional in = new Conditional();
                 return in;
 
             case 1:
-                introduction inn = new introduction();
+                Looping_for  inn = new Looping_for();
                 return inn;
+
+            case 2:
+                Looping_while lw= new Looping_while();
+                return lw;
+
+            case 3:
+                Range r= new Range();
+                return r;
         }
         return null;
     }
@@ -38,7 +50,7 @@ public class flowadapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // Show 2 total pages.
-        return 2;
+        return 4;
     }
     @Override
     public CharSequence getPageTitle (int i)
@@ -46,9 +58,13 @@ public class flowadapter extends FragmentPagerAdapter {
         switch (i)
         {
             case 0:
-                return "Introduction";
+                return "Conditional";
             case 1:
-                return "Installation";
+                return "Looping for";
+            case 2:
+                return "Looping while";
+            case 3:
+                return "Range";
 
         }
         return null;
